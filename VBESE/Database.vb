@@ -116,9 +116,9 @@ Public Class Database
     End Function
 
     ''' <summary>
-    ''' Eventをテーブルに追加する
+    ''' Itemをテーブルに追加する
     ''' </summary>
-    ''' <param name="ev">Eventオブジェクト</param>
+    ''' <param name="ev">Itemオブジェクト</param>
     Public Sub AddEvent(ev As Item)
         ExecuteInTransaction(Function(session, table)
                                  Using updater = New Update(session, table, JET_prep.Insert)
@@ -160,7 +160,7 @@ Public Class Database
     ''' <summary>
     ''' 全てのデータを取得する
     ''' </summary>
-    ''' <returns>Eventのリスト</returns>
+    ''' <returns>Itemのリスト</returns>
     Public Function GetAllEvents() As IList(Of Item)
         Return ExecuteInTransaction(Function(session, table)
                                         Dim results = New List(Of Item)()
@@ -175,11 +175,11 @@ Public Class Database
     End Function
 
     ''' <summary>
-    ''' Eventを取得する
+    ''' Itemを取得する
     ''' </summary>
     ''' <param name="session">Sessionオブジェクト</param>
     ''' <param name="table">Tableオブジェクト</param>
-    ''' <returns>Eventオブジェクト</returns>
+    ''' <returns>Itemオブジェクト</returns>
     Private Function GetEvent(session As Session, table As Table) As Item
         Dim ev = New Item()
 
@@ -202,10 +202,10 @@ Public Class Database
     End Function
 
     ''' <summary>
-    ''' Idを指定してEventを取得する
+    ''' Idを指定してItemを取得する
     ''' </summary>
     ''' <param name="id">Id</param>
-    ''' <returns>Eventオブジェクト</returns>
+    ''' <returns>Itemオブジェクト</returns>
     Public Function GetEventsById(id As Guid) As IList(Of Item)
         Return ExecuteInTransaction(Function(session, table)
                                         Dim results = New List(Of Item)()
@@ -224,7 +224,7 @@ Public Class Database
     ''' </summary>
     ''' <param name="minPrice">最小値</param>
     ''' <param name="maxPrice">最大値</param>
-    ''' <returns>Eventオブジェクトのリスト</returns>
+    ''' <returns>Itemオブジェクトのリスト</returns>
     Public Function GetEventsForPriceRange(minPrice As Double, maxPrice As Double) As IList(Of Item)
         Return ExecuteInTransaction(Function(session, table)
                                         Dim results = New List(Of Item)()
