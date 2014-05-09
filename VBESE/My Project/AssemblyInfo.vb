@@ -9,10 +9,10 @@ Imports System.Runtime.InteropServices
 ' アセンブリ属性の値を確認します。
 
 <Assembly: AssemblyTitle("VBESE")> 
-<Assembly: AssemblyDescription("")> 
-<Assembly: AssemblyCompany("")> 
+<Assembly: AssemblyDescription("ESENTのサンプルプログラム")> 
+<Assembly: AssemblyCompany("OPC Diary")> 
 <Assembly: AssemblyProduct("VBESE")> 
-<Assembly: AssemblyCopyright("Copyright ©  2014")> 
+<Assembly: AssemblyCopyright("Copyright ©  2014 Tadahiro Ishsiaka")> 
 <Assembly: AssemblyTrademark("")> 
 
 <Assembly: ComVisible(False)>

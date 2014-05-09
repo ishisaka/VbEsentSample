@@ -10,9 +10,9 @@ Imports System.Runtime.InteropServices
 
 <Assembly: AssemblyTitle("ExampleOfEsentPersistantDictionary2")> 
 <Assembly: AssemblyDescription("")> 
-<Assembly: AssemblyCompany("")> 
+<Assembly: AssemblyCompany("OPC Diary")> 
 <Assembly: AssemblyProduct("ExampleOfEsentPersistantDictionary2")> 
-<Assembly: AssemblyCopyright("Copyright ©  2014")> 
+<Assembly: AssemblyCopyright("Copyright ©  2014 Tadahiro Ishisaka")> 
 <Assembly: AssemblyTrademark("")> 
 
 <Assembly: ComVisible(False)>
